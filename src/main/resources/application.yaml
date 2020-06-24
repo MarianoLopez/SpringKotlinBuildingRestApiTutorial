@@ -3,9 +3,10 @@ spring:
     ansi:
       enabled: ALWAYS
   datasource:
-    url: jdbc:mariadb://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    url: jdbc:mariadb://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:PERSONS}
+    #this is just an example: Do put your credentials in a real app. Use env variables or app args instead
+    username: ${DB_USERNAME:spring}
+    password: ${DB_PASSWORD:spring}
   jpa:
     hibernate:
       ddl-auto: update
