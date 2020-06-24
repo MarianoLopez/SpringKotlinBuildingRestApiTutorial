@@ -3,9 +3,9 @@ spring:
     ansi:
       enabled: ALWAYS
   datasource:
-    url: jdbc:h2:file:${user.home}/kotlin-tutorial/db
-    username: sa
-    password: sa
+    url: jdbc:mariadb://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
